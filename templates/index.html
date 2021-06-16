@@ -1,0 +1,1232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jun 2021 02:02:26 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>MyStock Trader</title>
+    
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="static/css/vendors_css.css">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="static/css/skin_color.css">
+     
+  </head>
+
+<body class="hold-transition light-skin sidebar-mini theme-warning fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+	
+  <header class="main-header">
+	<div class="d-flex align-items-center logo-box justify-content-start">	
+		<!-- Logo -->
+		<a href="index.html" class="logo">
+		  <!-- logo-->
+		  <div class="logo-mini w-30">
+			  <span class="light-logo"><img src="static/images/logo-letter.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="static/images/logo-letter.png" alt="logo"></span>
+		  </div>
+		  <div class="logo-lg">
+			 {{session['SESS_USERNM']}}
+		  </div>
+		</a>	
+	</div>  
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+	  <div class="app-menu">
+		<ul class="header-megamenu nav">
+			<li class="btn-group nav-item">
+				<a href="#" class="waves-effect waves-light nav-link push-btn btn-primary-light" data-toggle="push-menu" role="button">
+					<i data-feather="align-left"></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Chat">
+					<i data-feather="message-circle"></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Mailbox">
+					<i data-feather="at-sign"></i>
+			    </a>
+			</li>
+
+		</ul> 
+	  </div>
+		
+      <div class="navbar-custom-menu r-side">
+        <ul class="nav navbar-nav">		  
+			<li class="btn-group d-lg-inline-flex d-none">
+				<div class="app-menu">
+					<div class="search-bx mx-5">
+						<form>
+							<div class="input-group">
+							  <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</li>
+			<li class="btn-group nav-item d-lg-inline-flex d-none">
+				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen btn-primary-light" title="Full Screen">
+					<i data-feather="maximize"></i>
+			    </a>
+			</li>
+		  <!-- Notifications -->
+		  <li class="dropdown notifications-menu">
+			<a href="#" class="waves-effect waves-light dropdown-toggle btn-primary-light" data-bs-toggle="dropdown" title="Notifications">
+			  <i data-feather="bell"></i>
+			</a>
+			<ul class="dropdown-menu animated bounceIn">
+
+			  <li class="header">
+				<div class="p-20">
+					<div class="flexbox">
+						<div>
+							<h4 class="mb-0 mt-0">Notifications</h4>
+						</div>
+						<div>
+							<a href="#" class="text-danger">Clear All</a>
+						</div>
+					</div>
+				</div>
+			  </li>
+
+			  <li>
+				<!-- inner menu: contains the actual data -->
+				<ul class="menu sm-scrol">
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+					</a>
+				  </li>
+				</ul>
+			  </li>
+			  <li class="footer">
+				  <a href="#">View all</a>
+			  </li>
+			</ul>
+		  </li>
+
+
+		  <!-- User Account-->
+          <li class="dropdown user user-menu">
+            <a href="#" class="waves-effect waves-light dropdown-toggle btn-primary-light" data-bs-toggle="dropdown" title="User">
+				<i data-feather="user"></i>
+            </a>
+            <ul class="dropdown-menu animated flipInX">
+              <li class="user-body">
+				 <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i> Profile</a>
+				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i> My Wallet</a>
+				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Settings</a>
+				 <div class="dropdown-divider"></div>
+
+			{% if session['SESS_LOGIN_STATUS']  == True %}
+			  <a class="dropdown-item" href="/auth_logout"><i class="ti-lock text-muted me-2"></i> Logout</a>
+			{% else %}
+			  <a class="dropdown-item" href="/auth_login"><i class="ti-lock text-muted me-2"></i> Login</a>
+			{% endif %}
+
+              </li>
+            </ul>
+          </li>
+
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+              <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light btn-primary-light">
+			  	<i data-feather="settings"></i>
+			  </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!--------------------- 좌측메뉴 ----------->
+  <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar position-relative">
+	  	<div class="multinav">
+		  <div class="multinav-scroll" style="height: 100%;">
+			  <!-- sidebar menu-->
+			  <ul class="sidebar-menu" data-widget="tree">
+				<li class="treeview">
+				  <a href="#">
+					<i data-feather="monitor"></i>
+					<span>Home</span>
+
+				  </a>
+
+				</li>
+				<li class="treeview">
+				  <a href="#">
+					<i data-feather="bar-chart-2"></i>
+					<span>Reports</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="reports_transactions.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Transactions</a></li>
+					<li><a href="reports_top_gainers_losers.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Top Gainers/Losers</a></li>
+					<li><a href="reports_market_capitalizations.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Market Capitalizations</a></li>
+					<li><a href="reports_crypto_stats.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Crypto Stats</a></li>
+				  </ul>
+				</li>
+
+				  <li>
+				  <a href="currency_exchange.html">
+					<i data-feather="refresh-ccw"></i>
+					<span>Coin Offerin</span>
+				  </a>
+				</li>
+
+				<li>
+				  <a href="currency_exchange.html">
+					<i data-feather="refresh-ccw"></i>
+					<span>Currency Exchange</span>
+				  </a>
+				</li>
+
+				<li class="treeview">
+				  <a href="#">
+					<i data-feather="sliders"></i>
+					<span>Tickers</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="tickers.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Ticker</a></li>
+					<li><a href="tickers_live_pricing.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Live Crypto Prices</a></li>
+				  </ul>
+				</li>
+
+				<li class="treeview">
+				  <a href="#">
+					<i data-feather="pie-chart"></i>
+					<span>Charts</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="charts_chartjs.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>ChartJS</a></li>
+					<li><a href="charts_flot.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Flot</a></li>
+					<li><a href="charts_inline.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Inline charts</a></li>
+					<li><a href="charts_morris.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Morris</a></li>
+					<li><a href="charts_peity.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Peity</a></li>
+					<li><a href="charts_chartist.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chartist</a></li>
+
+					<li><a href="charts_rickshaw.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Rickshaw Charts</a></li>
+					<li><a href="charts_nvd3.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>NVD3 Charts</a></li>
+					<li><a href="charts_echart.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>eChart</a></li>
+
+					<li><a href="charts_amcharts.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Charts</a></li>
+					<li><a href="charts_amstock_charts.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Stock Charts</a></li>
+					<li><a href="charts_ammaps.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>amCharts Maps</a></li>
+				  </ul>
+				</li>
+
+				<li class="treeview">
+				  <a href="#">
+					<i data-feather="lock"></i>
+					<span>Authentication</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="/auth_login"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Login</a></li>
+					<li><a href="/auth_register"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Register</a></li>
+					<li><a href="auth_lockscreen.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Lockscreen</a></li>
+					<li><a href="auth_user_pass.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Recover password</a></li>
+				  </ul>
+				</li>
+
+			  </ul>
+			  <!----------------------------------------- 좌측 배너 박스 ---------------------->
+			  <div class="sidebar-widgets">
+				<div class="mx-25 mb-30 p-30 text-center bg-primary-light rounded5">
+					<img src="static/images/trophy.png" alt="">
+					<h4 class="my-3 fw-500 text-uppercase text-primary">Start Trading</h4>
+					<span class="fs-12 d-block mb-3 text-black-50">Offering discounts for better online a store can loyalty weapon into driving</span>
+					<button type="button" class="waves-effect waves-light btn btn-sm btn-primary mb-5">Invest Now</button>
+				</div>
+				<div class="copyright text-center m-25">
+					<p><strong class="d-block">K-digital</strong> © 2021 All Rights Reserved</p>
+				</div>
+			  </div>
+		  </div>
+		</div>
+    </section>
+  </aside>
+	  <!--------------------- 좌측메뉴 ----------->
+
+
+
+				  <!-- Content Wrapper. Contains page content -->
+				  <div class="content-wrapper">
+					  <div class="container-full">
+						<!-- Main content -->
+						<section class="content">
+							<div class="row">
+
+				<!--------------- 상단 롤링 ---------------------->
+				 <div class="box">
+							  <div class="box-body">
+								  <ul id="webticker-2">
+									  {% for data in KEY_KOSPI50 %}
+										{% if data.chg > 0 %}<!-- 변동률이 +일 경우 빨간색으로 보여줌 -->
+											<li class="py-5" style="white-space: nowrap; float: left; padding: 0px 7px;"><i class="cc LBC d-block mx-auto mb-10"></i> <p class="mb-0">{{ data.name }}</p> <span class="d-block text-danger"> +{{ data.chg|round(2) }}% <i class="fa fa-arrow-up"></i></span></li>
+										{% else %} <!-- 변동률이 -일 경우 파란색으로 보여줌 -->
+											<li class="py-5" style="white-space: nowrap; float: left; padding: 0px 7px;"><i class="cc LBC d-block mx-auto mb-10"></i> <p class="mb-0">{{ data.name }}</p> <span class="d-block text-success"> {{ data.chg|round(2) }}% <i class="fa fa-arrow-up"></i></span></li>
+										{% endif %}
+									  {% endfor %}
+								  </ul>
+							  </div>
+						  </div>
+				<!--------------- 상단 롤링 ---------------------->
+
+
+				<!---------------------------상단 좌측 2 박스 ------------------------------->
+				<div class="col-xl-3 col-12">
+
+					<!-------------- 시장 요약 ------------->
+					<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">시장요약</h4>
+						<ul class="box-controls pull-right">
+						  <li><a class="box-btn-fullscreen" href="#"></a></li>
+						</ul>
+					</div>
+					<div class="box-body px-15 pt-0 pb-10">
+						<div class="table-responsive">
+							<table class="table no-border mb-0">
+							  <tbody>
+								{% for item in KEY_TOTAL_IDX %}
+									<tr>
+									  <td>
+										<a href="#" class="text-yellow hover-warning">{{item.name}}</a>
+									  </td>
+									  <td class="text-nowrap">{{item.close}}</td>
+									  <td>
+										<time class="timeago text-nowrap" datetime="2018-02-01T13:38:00Z" title="2018-02-01 13:38 GMT">{{item.rate|round(2)}}</time>
+									  </td>
+									</tr>
+								{% endfor %}
+							  </tbody>
+							</table>
+						</div>
+					</div>
+				  </div>
+					<!-------------- 시장 요약 ------------->
+
+
+					<!--------------  내 관심종목 + 급등주 ------------->
+
+					<div class="box">
+						  <ul class="nav nav-tabs nav-tabs-danger nav-justified" role="tablist">
+							<li class="nav-item">
+							  <a class="nav-link active fs-18" data-bs-toggle="tab" href="#interest" role="tab">내 관심종목</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link fs-18" data-bs-toggle="tab" href="#topn" role="tab">급등주</a>
+							</li>
+						  </ul>
+
+						  <!-- Tab panes -->
+						  <div class="box-body tab-content">
+							<!-- ----------------------------탭1 내 관심종목---------------------------------------- -->
+							<div class="tab-pane fade active show" id="interest">
+								dfdfdfdf
+
+							</div>
+							<!-- ----------------------------탭2 급등주---------------------------------------- -->
+							<div class="tab-pane fade" id="topn">
+							<table class="table table-border no-margin">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Price</th>
+										<th>Change</th>
+										<th></th>
+									</tr>
+								</thead>
+								<!-- ---------------------- 급등주 -------------------->
+								<tbody id="interest_stock_body">
+								{% for list_data in KEY_TOP50 %}
+								  <tr>
+									  <td><i class="fs-16 me-5 cc BTC" title="BTC"></i>
+										<a href="#" style="cursor:hand()" onClick="goChart('{{list_data[3]}}','{{list_data[0]}}')">
+											{{list_data[0]}}</a>
+									  </td>
+									  <td><p class="no-margin text-fade">{{list_data[1]}}</p></td>
+									  <td class="no-wrap"><span class="text-success"><i class="fa fa-caret-up"></i> {{list_data[2]}} %</span></td>
+									  <td><input type="checkbox" name="check"></td>
+								  </tr>
+								{% endfor %}
+								</tbody>
+								<!-- ---------------------- 급등주 paging -------------------->
+								<tfoot>
+								<tr><td colspan="4" align="center">
+											{% for page in range(1,6) %}
+									<a href="#" onClick="goPaging({{page}})"><font size="3">[{{page}}]</font></a>
+											{% endfor %}
+											</td>
+										</tr>
+								</tfoot>
+
+							</table>
+							</div>
+
+							<script>
+								function goPaging(page) {
+									alert(page+"gogogoo");
+									interest_stock_body
+
+									//------ /rest 비동기통신 --------------------------------
+									$.ajax({
+										  url: "/rest_top50_paging",
+										  data: {
+											"page": page
+										  },
+										  success: function( result ) {  //콜백함수처리 방식으로 결과 받아온다
+												console.log(result)
+												var jsonObj = JSON.parse(result);
+												console.log(jsonObj)   //[Array(), Array()...]
+
+												paging_topn_html = "";
+												$.map( jsonObj, function( val, idx ) {
+													console.log(val[0])
+													paging_topn_html += "<tr>";
+													paging_topn_html += "<td><i class='fs-16 me-5 cc BTC' title='BTC'></i><a href='#' style='cursor:hand()' onClick=goChart('"+val[3]+"','"+val[0]+"')>"+val[0]+"</a></td>";
+													paging_topn_html += "<td><p class='no-margin text-fade'>"+val[1]+"</p></td>";
+													paging_topn_html += "<td class='no-wrap'><span class='text-success'><i class='fa fa-caret-up'></i>"+val[2]+"%</span></td>";
+													paging_topn_html += "<td class='text-center'><i class='fa fa-star text-primary'></i></td>";
+													paging_topn_html += "</tr>";
+												});
+												$("#interest_stock_body").empty();
+												$("#interest_stock_body").html(paging_topn_html);
+
+										  },
+										  error: function( result ) {
+												alert("error");
+										  },
+									});
+
+
+								}
+							</script>
+						  </div>
+					</div>
+
+
+
+
+
+					<!-------------- 실시간 주가 + 내 관심종목   ------------->
+
+				</div>
+				<!---------------------------상단 좌측 2 박스 ------------------------------->
+
+
+				<!-- ========================= 상단 중앙 1 박스 - 캔들차트 ========================= --->
+				<div class="col-xl-6 col-12">
+					<div class="box">
+						<!--------------- 캔들상단 ------>
+						<div class="box-header">
+							<div class="d-lg-flex justify-content-between align-items-center d-inline-block">
+								<h4 class="my-0 text-fade"><i class="cc BTC" title="BTC"></i><span class="text-dark"><div id="header_name"></div></span></h4>
+								<div class="d-lg-block d-none">
+									<hr class="h-50 m-0" style="width: 1px;">
+								</div>
+								<div class="text-end">
+									<h5><span id="header_close"></span><span class="text-fade">원</span></h5>
+									<p class="mb-5 text-danger"><span id="header_chg"></span> <i class="fa fa-arrow-down"></i></p>
+								</div>
+								<div class="d-lg-block d-none">
+									<hr class="h-50 m-0" style="width: 1px;">
+								</div>
+								<div class="d-lg-block d-none">
+									<p class="mb-5 text-fade">High</p>
+									<h5><span id="header_high"></span><span class="text-fade">원</span></h5>
+								</div>
+								<div class="d-lg-block d-none">
+									<hr class="h-50 m-0" style="width: 1px;">
+								</div>
+								<div class="d-lg-block d-none">
+									<p class="mb-5 text-fade">Low</p>
+									<h5><span id="header_low"></span><span class="text-fade">원</span></h5>
+								</div>
+								<div class="d-lg-block d-none">
+									<hr class="h-50  m-0" style="width: 1px;">
+								</div>
+								<div class="d-lg-block d-none">
+									<p class="mb-5 text-fade">Volume</p>
+									<h5><span id="header_volume"></span><span class="text-fade">주</span></h5>
+								</div>
+							</div>
+						</div>
+						<!--------------- 캔들상단 ------>
+						<div class="form-group" style="margin:20px;">
+							<label class="form-label">차트지표 & 보조차트</label>
+							<div class="c-inputs-stacked">
+								<input type="checkbox" id="checkbox_1">
+								<label for="checkbox_1" class="me-30">이평선</label>
+								<input type="checkbox" id="checkbox_2">
+								<label for="checkbox_2" class="me-30">볼랜드</label>
+
+								<input type="checkbox" id="checkbox_3">
+								<label for="checkbox_3" class="me-30">거래량</label>
+								<input type="checkbox" id="checkbox_4">
+								<label for="checkbox_4" class="me-30">RSI</label>
+								<input type="checkbox" id="checkbox_5">
+								<label for="checkbox_5" class="me-30">모멘텀</label>
+							</div>
+						</div>
+
+
+						<!--------------- 캔들차트 C:\IT\pythonProject2\venv\FTAPP\static\js\pages\dashboard3-chart.js
+						<div class="box-body p-5">
+							<div id="bitcoin-stock" class="mb-15"></div>
+						</div>
+						---- 캔들차트 ------>
+
+
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="box-body p-5 tradingview-widget-container">
+  <div id="tradingview_23509"></div>
+  <div class="tradingview-widget-copyright">TradingView 제공 <a href="https://kr.tradingview.com/symbols/005930" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+			  {
+			  "width": 600,
+			  "height": 610,
+			  "symbol": '005930',
+			  "interval": "D",
+			  "timezone": "Etc/UTC",
+			  "theme": "light",
+			  "style": "1",
+			  "locale": "kr",
+			  "toolbar_bg": "#f1f3f6",
+			  "enable_publishing": false,
+			  "allow_symbol_change": true,
+			  "container_id": "tradingview_23509"
+			}
+	);
+
+	function goChart(code, tname) {
+			  new TradingView.widget(
+			  {
+			  "width": 600,
+			  "height": 610,
+			  "symbol": code,
+			  "interval": "D",
+			  "timezone": "Etc/UTC",
+			  "theme": "light",
+			  "style": "1",
+			  "locale": "kr",
+			  "toolbar_bg": "#f1f3f6",
+			  "enable_publishing": false,
+			  "allow_symbol_change": true,
+			  "container_id": "tradingview_23509"
+			  }
+			);
+
+			//----------------------------- 종합정보, 시장이슈, 재무정보, 시세정보 --------------------------------
+			$.ajax({
+			  url: "/rest_info_tap",
+			  data: {
+			  	"code": code
+			  },
+			  success: function( resultDict ) {
+				// 우측 탭 (종합정보, 시장이슈, 재무정보)
+				$("#myTab1_Content").html(resultDict['html_tab1']);
+				$("#myTab2_Content").html(resultDict['html_tab2']);
+				$("#myTab3_Content").html(resultDict['html_tab3']);
+
+				// 차트 상단 박스 (시세정보)
+				$("#header_name").html(resultDict['header_box'][0])
+				$("#header_close").html(resultDict['header_box'][1])
+				$("#header_chg").html(resultDict['header_box'][2])
+				$("#header_high").html(resultDict['header_box'][3])
+				$("#header_low").html(resultDict['header_box'][4])
+				$("#header_volume").html(resultDict['header_box'][5])
+
+			  },
+			  error: function( result ) {
+				alert("error!!!!!");
+			  },
+			});
+
+			//------------------------------ 차트 상단 box  --------------------------------
+		}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+
+					</div>
+
+				</div>
+				<!-- ========================= 상단 중앙 1 박스 - 캔들차트 ========================= --->
+
+
+
+
+
+				<!------------- 관련 뉴스 ------------------>
+				<div class="col-xl-3 col-12">
+					<div class="box">
+						  <ul class="nav nav-tabs nav-tabs-danger nav-justified" role="tablist">
+							<li class="nav-item">
+							  <a class="nav-link active fs-18" data-bs-toggle="tab" href="#info" role="tab">종합정보</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link fs-18" data-bs-toggle="tab" href="#news" role="tab">시장이슈</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link fs-18" data-bs-toggle="tab" href="#etc" role="tab">재무정보</a>
+							</li>
+						  </ul>
+
+						  <!-- Tab panes -->
+						  <div class="box-body tab-content">
+							<!-- ----------------------------탭1---------------------------------------- -->
+							<div class="tab-pane fade active show" id="info">
+							    <table class="table table-border no-margin">
+									   <tbody>
+										  <tr>
+											 <td id="myTab1_Content"> 재무정보</td>
+										  </tr>
+
+										</tbody>
+								  </table>
+							</div>
+							<!-- ----------------------------탭2---------------------------------------- -->
+							<div class="tab-pane fade" id="news">
+									<table class="table table-border no-margin">
+									  <thead>
+										 <tr>
+
+											 <th>Date</th>
+											<th>Title</th>
+											 <th></th>
+										 </tr>
+									  </thead>
+									   <tbody id="myTab2_Content">
+
+										</tbody>
+								  </table>
+							</div>
+							<!-- ----------------------------탭3---------------------------------------- -->
+							<div class="tab-pane fade" id="etc">
+								<table class="table table-border no-margin">
+									   <tbody>
+										  <tr>
+											 <td  id="myTab3_Content">재무정보</td>
+										  </tr>
+										</tbody>
+								  </table>
+							</div>
+							<!-- ----------------------------탭3---------------------------------------- -->
+						  </div>
+					</div>
+				</div>
+				<!------------- 관련 뉴스 ------------------>
+
+
+<!-- ##################################################################################################### -->
+
+
+
+
+			</div>
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<a class="nav-link" href="javascript:void(0)">FAQ</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Purchase Now</a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; 2021 <a href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar">
+
+	<div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i class="ion ion-close text-white" data-toggle="control-sidebar"></i></span> </div>  <!-- Create the tabs -->
+    <ul class="nav nav-tabs control-sidebar-tabs">
+      <li class="nav-item"><a href="#control-sidebar-home-tab" data-bs-toggle="tab" class="active"><i class="mdi mdi-message-text"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-bs-toggle="tab"><i class="mdi mdi-playlist-check"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>
+			<p>Users</p>
+			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+		  </div>
+		  <div class="lookup lookup-sm lookup-right d-none d-lg-block">
+			<input type="text" name="s" placeholder="Search" class="w-p100">
+		  </div>
+          <div class="media-list media-list-hover mt-20">
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="static/images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="static/images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="static/images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="static/images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="static/images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="static/images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="static/images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="static/images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+		  </div>
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>
+			<p>Todo List</p>
+			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+		  </div>
+        <ul class="todo-list mt-20">
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_1" class="filled-in">
+			  <label for="basic_checkbox_1" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_2" class="filled-in">
+			  <label for="basic_checkbox_2" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_3" class="filled-in">
+			  <label for="basic_checkbox_3" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_4" class="filled-in">
+			  <label for="basic_checkbox_4" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_5" class="filled-in">
+			  <label for="basic_checkbox_5" class="mb-0 h-15"></label>
+			  <span class="text-line">Maecenas scelerisque</span>
+			  <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_6" class="filled-in">
+			  <label for="basic_checkbox_6" class="mb-0 h-15"></label>
+			  <span class="text-line">Vivamus nec orci</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_7" class="filled-in">
+			  <label for="basic_checkbox_7" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_8" class="filled-in">
+			  <label for="basic_checkbox_8" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_9" class="filled-in">
+			  <label for="basic_checkbox_9" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_10" class="filled-in">
+			  <label for="basic_checkbox_10" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+		  </ul>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+</div>
+<!-- ./wrapper -->
+
+
+	<!-- ====================================== 우측 꼬리표 매뉴 =============================================== -->
+	<!-- ./side demo panel -->
+	<div class="sticky-toolbar">
+	    <a href="http://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd" data-bs-toggle="tooltip" data-bs-placement="left"
+		   title="KRX" class="waves-effect waves-light btn btn-primary-light btn-flat mb-5 btn-sm" target="_blank">
+			<span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
+		</a>
+	    <a href="http://ecos.bok.or.kr/flex/EasySearch.jsp" data-bs-toggle="tooltip" data-bs-placement="left" title="ECOS"
+		   class="waves-effect waves-light btn btn-primary-light btn-flat mb-5 btn-sm" target="_blank">
+			<span class="icon-Image"></span>
+		</a>
+		<a href="http://data.krx.co.kr/contents/MDC/HARD/hardController/MDCHARD008.cmd" data-bs-toggle="tooltip" data-bs-placement="left" title="INVESTING"
+		   class="waves-effect waves-light btn btn-primary-light btn-flat mb-5 btn-sm" target="_blank">
+			<span class="icon-Image"></span>
+		</a>
+	</div>
+	<!-- ====================================== 우측 꼬리표 매뉴 =============================================== -->
+
+
+
+	<!-- ================================= chat box =========================== -->
+	<div id="chat-box-body">
+		<div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-lg btn-primary l-h-70">
+            <div id="chat-overlay"></div>
+            <span class="icon-Group-chat fs-30"><span class="path1"></span><span class="path2"></span></span>
+		</div>
+
+		<div class="chat-box">
+
+
+
+<a id="custom-login-btn" href="javascript:loginWithKakao()">
+  <img  src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" width="222" />
+</a>
+
+<a onclick="kakaoLogout();">카카오 로그아웃</a>
+
+            <!--<div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-bs-toggle="dropdown">
+                      <span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
+                  </button>
+                  <div class="dropdown-menu min-w-200">
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Color me-15"></span>
+                        New Group</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Clipboard me-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                        Contacts</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Groups</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Active-call me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Calls</a>
+                    <a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Settings1 me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Settings</a>
+                    <div class="dropdown-divider"></div>
+					<a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Question-circle me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Help</a>
+					<a class="dropdown-item fs-16" href="#">
+                        <span class="icon-Notifications me-15"><span class="path1"></span><span class="path2"></span></span>
+                        Privacy</a>
+                  </div>
+                </div>
+                <div class="text-center flex-grow-1">
+                    <div class="text-dark fs-18">Mayra Sibley</div>
+                    <div>
+                        <span class="badge badge-sm badge-dot badge-primary"></span>
+                        <span class="text-muted fs-12">Active</span>
+                    </div>
+                </div>
+                <div class="chat-box-toggle">
+                    <button id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" type="button">
+                      <span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-overlay">
+                </div>
+                <div class="chat-logs">
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="static/images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+                                <p class="text-muted fs-12 mb-0">2 Hours</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Hi there, I'm Jesse and you?
+                        </div>
+                    </div>
+                    <div class="chat-msg self">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">You</a>
+                                <p class="text-muted fs-12 mb-0">3 minutes</p>
+                            </div>
+                            <span class="msg-avatar">
+                                <img src="static/images/avatar/3.jpg" class="avatar avatar-lg">
+                            </span>
+                        </div>
+                        <div class="cm-msg-text">
+                           My name is Anne Clarc.
+                        </div>
+                    </div>
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="static/images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
+                                <p class="text-muted fs-12 mb-0">40 seconds</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Nice to meet you Anne.<br>How can i help you?
+                        </div>
+                    </div>
+                </div>&lt;!&ndash;chat-log &ndash;&gt;
+            </div>
+            <div class="chat-input">
+                <form>
+                    <input type="text" id="chat-input" placeholder="Send a message..."/>
+                    <button type="submit" class="chat-submit" id="chat-submit">
+                        <span class="icon-Send fs-22"></span>
+                    </button>
+                </form>
+            </div>-->
+		</div>
+	</div>
+	<!-- ================================= chat box =========================== -->
+
+
+
+
+
+	<!-- Vendor JS -->
+	<script src="static/js/vendors.min.js"></script>
+	<script src="static/js/pages/chat-popup.js"></script>
+    <script src="static/assets/icons/feather-icons/feather.min.js"></script>
+
+	<script src="static/assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
+	<script src="static/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="static/assets/vendor_components/datatable/datatables.min.js"></script>
+
+	<!-- Crypto Admin App -->
+	<script src="static/js/template.js"></script>
+	<!-- Crypto Admin App
+	<script src="static/js/pages/dashboard3.js"></script>
+	<script src="static/js/pages/dashboard3-chart.js"></script>
+ 	-->
+
+	<!-- webticker -->
+	<script src="static/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js"></script>
+	<script src="static/js/pages/web-ticker.js"></script>
+
+
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript">
+
+/*
+function loginWithKakao() {
+    Kakao.init('31e52579136995b5673488ba3ad12ff0');
+
+    Kakao.Auth.login({
+
+    	success: function(result) {
+            var accessToken = Kakao.Auth.getAccessToken(); // 액세스 토큰 할당
+            Kakao.Auth.setAccessToken(accessToken); // 액세스 토큰 사용하게 등록
+
+            // 필수 snsType, snsKey
+            params.form.append([
+              $('<input />', {'type' : 'hidden', 'name' : 'snsKey' , 'value' : result.id}),
+              $('<input />', {'type' : 'hidden', 'name' : 'snsType' , 'value' : 'kakaotalk'}),
+              $('<input />', {'type' : 'hidden', 'name' : 'accessToken' , 'value' : accessToken})
+            ]);
+
+              // 추가 요청 값
+              var dataArray = new Array();
+              if (result.kakao_account) {
+                $.each(result.kakao_account, function(key, val) {
+                  if (typeof val == 'object') {
+                    $.each(val, function(smallKey, smallVal) {
+                      dataArray[smallKey] = smallVal;
+                    });
+                  } else {
+                    dataArray[key] = val;
+                  }
+                });
+              }
+
+              $.each(params.request, function(key, val) {
+                params.form.append($('<input />', {'type' : 'hidden', 'name' : val , 'value' : dataArray[val]}));
+              });
+
+              params.form.submit();
+            },
+            fail : function(error) {
+              console.log('카카오톡과 연결이 완료되지 않았습니다. \n다시 시도해주시기 바랍니다.');
+            }
+          })
+        },
+        fail : function(error) {
+          console.log('카카오톡과 연결 실패하였습니다. \n다시 시도해주시기 바랍니다.');
+        },
+
+
+		  <!--success: function(authObj) {
+				alert(JSON.stringify(authObj));
+				// 로그인 성공시, API를 호출합니다.
+				Kakao.API.request({
+					url: '/v2/user/me',
+					success: function(res) {
+						console.log(JSON.stringify(res));
+					},
+					fail: function(error) {
+						alert(JSON.stringify(error));
+					}
+				});
+		  },
+		  fail: function(err) {
+				alert(JSON.stringify(err));
+		  }
+	});
+}
+
+function kakaoLogout() {
+ 	if (Kakao.Auth.getAccessToken()) {
+		Kakao.Auth.logout(function(response) {
+			alert(response + 'logout');
+		});
+	}
+}
+*/
+</script>
+
+
+</body>
+
+<!-- Mirrored from crypto-admin-templates.multipurposethemes.com/sass/bs5/main-light/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Jun 2021 02:03:46 GMT -->
+</html>
